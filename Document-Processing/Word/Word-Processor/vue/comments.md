@@ -235,8 +235,7 @@ The following example illustrates how to enable mention support in the DOCX Edit
 
 ## Highlight comments by author
 
-When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. 
-Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
+When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
 
 The following example illustrates how to enable comment highlights in the DOCX Editor
 
@@ -250,8 +249,10 @@ The following example illustrates how to enable comment highlights in the DOCX E
   import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
   export default {
     data() {
-      return { serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
-      settings: {  highlightCommentsByAuthor : true }},
+      return {
+      serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
+      settings: { commentSettings: { highlightCommentsByAuthor : true } }
+      },
     },
     provide: {
       //Inject require modules.
