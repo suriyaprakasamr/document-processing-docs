@@ -179,8 +179,7 @@ container.appendTo('#container');
 
 ## Highlight comments by author
 
-When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color.
-Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
+When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
 
 The following example illustrates how to enable comment highlights in the DOCX Editor
 
@@ -189,7 +188,7 @@ var container = new ej.documenteditor.DocumentEditorContainer({
     enableToolbar: true,
     height: '590px',
     // Enable mention support in document editor
-    documentEditorSettings: { highlightCommentsByAuthor : true }    
+    documentEditorSettings: { commentSettings: { highlightCommentsByAuthor : true } }    
 });
 
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
